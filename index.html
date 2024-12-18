@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/83c1b1c9a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul>
+          <li><a href='# header'>Home</a></li>
+          <li><a href='#about'>About</a></li>
+          <li><a href="#header">Services</a></li>
+          <li><a href="portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>FRONTEND DEVELOPER</p>
+        <h1>Hi, I'm <span>Tharun</span></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="container">
+      <div class="row">
+        <!-- Left Side: Image -->
+        <div class="about-col-1">
+          <img src="images/user.png" alt="My Image">
+        </div>
+        <!-- Right Side: Text -->
+        <div class="about-col-2">
+          <h1>About Me</h1>
+          <p>
+
+
+            Hi! I'm Tharun, a passionate frontend developer who loves crafting
+            beautiful and functional websites.I enjoy learning new technologies,
+            solving problems, and collaborating with others to create impactful
+            projects. Outside of coding, I have a keen interest in exploring nature, reading,
+            and discovering innovative solutions to everyday challenges. Let's connect
+            and create something amazing together!
+          </p>
+          <div class="tabs-container">
+            <!-- Tab Titles -->
+            <div class="tab-titles">
+              <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
+              <button class="tab-link" onclick="openTab(event, 'experience')">Experience</button>
+              <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
+            </div>
+        
+            <!-- Tab Content -->
+            <div class="tab-content">
+              <div id="skills" class="tab-pane active">
+                <h1>Skills</h1>
+                <span>UI/UX</span>
+                <p>Designing Web/App Interfaces</p>
+                <span>Web Development</span>
+                <p>Web App Development</p>
+                <span>App Development</span>
+                <p>Building Android/IOS Apps</p>
+              </div>
+              <div id="experience" class="tab-pane">
+                <h2>Experience</h2>
+                <p>I have experience working on several projects, creating responsive websites, and collaborating with teams to deliver high-quality work.</p>
+              </div>
+              <div id="education" class="tab-pane">
+                <h2>Education</h2>
+                <p>I am currently pursuing a Bachelor's degree in Electronics and Communication Engineering at Kuppam Engineering College. I am passionate about learning and growing in my field.</p>
+              </div>
+            </div>
+          </div>
+        
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <h1>Our Services</h1>
+    <p>Explore the creative solutions we offer!</p>
+</header>
+<section class="services">
+    <div class="service-card">
+      <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p>Creating stunning, responsive websites tailored to your needs.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-crop-simple"></i>
+        <h2>App Design</h2>
+        <p>Designing user-friendly and visually appealing mobile applications.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-brands fa-app-store"></i>
+        <h2>UI/UX Design</h2>
+        <p>Enhancing user experience with intuitive interfaces and designs.</p>
+    </div>
+    
+      </div>
+    </div>
+    
+</section>
+<div class="Contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="contac">Contact Me</h1>
+       <div class="rr">
+        <i class="fa-solid fa-envelope"></i>
+        <p class="email">muralitharun1431@gmail.com</p>
+       </div>
+       
+       
+       <div class="div">
+        <i class="fa-solid fa-phone"></i>
+        <p class="number">+91-7075337903</p>
+       </div>
+       
+        <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <button class="but"> Download Cv</button>
+
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+        <div class="place">
+          <input type="text" name="Name" placeholder="Your Name">
+        </div>
+        
+        <div class="holder">
+          <input type="text" name="email"  placeholder="Your Email">
+        </div>
+        <div class="message">
+          <textarea name="message" rows="6" placeholder=" Message"></textarea>
+        </div>
+        <div class="sub">
+          <button type="submit" >Submit</button></div>
+      </div>
+    
+    </div>
+  </form>
+     <script>
+      function openTab(event, tabId) {
+  // Get all tab panes and hide them
+  const tabPanes = document.querySelectorAll('.tab-pane');
+  tabPanes.forEach((pane) => pane.classList.remove('active'));
+
+  // Get all tab links and deactivate them
+  const tabLinks = document.querySelectorAll('.tab-link');
+  tabLinks.forEach((link) => link.classList.remove('active'));
+
+  // Show the selected tab and activate the link
+  document.getElementById(tabId).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+     </script>
+    <script>
+    function doPost(e) {
+      try {
+        // Open your Google Sheet
+        var sheet = SpreadsheetApp.openById("https://script.google.com/macros/s/AKfycbw3iVx2VGtHdZ77xEBRYq-rvay46g38JQbiXIFweDTN6LJOGbk_zRXi-lhw9WN0MPMX/exec").getSheetByName("contact form");
+    
+        // Extract form data from request parameters
+        var name = e.parameter.Name || "No Name Provided";
+        var email = e.parameter.email || "No Email Provided";
+        var message = e.parameter.message || "No Message Provided";
+    
+        // Append data to the sheet
+        sheet.appendRow([new Date(), name, email, message]);
+    
+        // Respond with success
+        return ContentService.createTextOutput("Success!").setMimeType(ContentService.MimeType.TEXT);
+      } catch (error) {
+        // Log errors and respond with failure
+        Logger.log(error);
+        return ContentService.createTextOutput("Error!").setMimeType(ContentService.MimeType.TEXT);
+      }
+    }
+    </script>
+</body>
+</html>
